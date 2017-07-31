@@ -1,0 +1,98 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+/* HEADER */
+header {
+	position: relative;
+    top: -30px;
+	margin-top: 5px;
+	.logo{
+		display:inline-block;
+		margin-left: 20px;		
+		img{
+			position: relative;
+    		top: 8px;
+   		}
+	}
+	.inicio {
+		display:inline-block;
+		color: $grisIconos;
+		margin-right: 20px;
+	}
+	.buscar-cont {
+		@include  buscar();
+		.fa-search {
+			margin-left: 15px;
+			color: $grisIconos;
+		}
+		input {
+		@include inputBuscar();
+		}
+		.buscador:focus {
+			outline: none;
+		}
+		.fa-times {
+			margin-left: 15px;
+			color: $grisIconos;
+		}
+		.pines-cont {
+			display:inline-block;
+			border-left: 1px solid #CFCFCF;
+			p{
+				@include textoPines();
+			}
+			.fa-angle-down{
+				@include iconDown();
+			}
+		}
+	}
+	.usuario {
+		display:inline-block;
+		img{
+			@include imgUser();
+		}
+		p{
+			display:inline-block;	
+			color: $grisIconos;
+		}
+	}
+	.nav-collapse {
+		display:inline-block;
+		.fa-bars {
+			margin-left: 40px;
+			color: $grisIconos;
+			font-weight: 600;	
+			font-size:25px;		
+		}
+		.sombra-hover {
+			@include hoverCir();
+		    left: 26px;
+		    top: 36px;
+		}
+		.sombra-hover:hover {
+			background-color: $colorHover;	
+		}
+	}
+	.comments {
+		display:inline-block;
+		.fa-commenting{
+			margin-left: 30px;
+			color: $grisIconos;
+			font-weight: 600;
+			font-size:25px;				
+		}
+		.sombra-hover {
+			@include hoverCir();
+		    top: 37px;
+		    left: 17px;
+		}
+		.sombra-hover:hover {
+			background-color: $colorHover;
+		}
+	}
+	hr {
+		border-color: $colorHover;
+	}
+}
